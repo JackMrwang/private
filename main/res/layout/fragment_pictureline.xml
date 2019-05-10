@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Test.PicturelineFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:src="@drawable/xx"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="20dp"
+                android:id="@+id/pictureimage1"
+                android:layout_width="100dp"
+                android:layout_height="100dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:src="@drawable/ww"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="20dp"
+                android:id="@+id/pictureimage2"
+                android:layout_width="100dp"
+                android:layout_height="100dp" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>
