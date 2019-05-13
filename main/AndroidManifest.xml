@@ -11,16 +11,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Tenquestion.statisticalActivity"></activity>
-        <activity android:name=".Tenquestion.BuscatchActivity">
+        <activity android:name=".Eighthquestion.TestActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Ninthquestion.AccountmanagerActivity"></activity>
-        <activity android:name=".Eighthquestion.TravelmanagerActivity" />
+        <activity android:name=".Practice.AutoActivity"></activity>
+        <activity android:name=".Tenquestion.statisticalActivity" />
+        <activity android:name=".Tenquestion.BuscatchActivity"></activity>
+        <activity android:name=".Ninthquestion.AccountmanagerActivity" >
+
+        </activity>
+        <activity android:name=".Eighthquestion.TravelmanagerActivity">
+        </activity>
         <activity android:name=".Seventhquestion.RealizeActivity" />
         <activity android:name=".Catch.ChaxunActivity" />
         <activity android:name=".Catch.CatchresultActivity" />

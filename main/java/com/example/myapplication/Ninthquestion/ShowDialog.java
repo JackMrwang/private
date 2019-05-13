@@ -9,19 +9,22 @@ import android.widget.TextView;
 
 import com.example.myapplication.R;
 
+import java.util.List;
+
 public class ShowDialog  {
-    public void showPopup(final Context context, View view, final Carp carp, final CarpAdapter carpAdapter){
+    public void showPopup(final Context context, View view, List<Integer> integers,List<Carp> carps, final CarpAdapter carpAdapter){
         final Dialog dialog = new Dialog(context);
-        //popupWindow.setOutsideTouchable(true);
-        dialog.setCanceledOnTouchOutside(false);//外部触摸
+        dialog.setCanceledOnTouchOutside(false);
         dialog.setContentView(R.layout.layout_topup);
         TextView carNumber = dialog.findViewById(R.id.car_number1);
-        TextView carNumber1= dialog.findViewById(R.id.car_number2);
         final EditText editText = dialog.findViewById(R.id.car_money);
         Button buttonOK = dialog.findViewById(R.id.car_ok);
         Button buttonCancel = dialog.findViewById(R.id.car_cancel);
-        carNumber.setText(carp.getNum());
-        carNumber1.setText(carp.getNum());
+        StringBuilder capcap= new StringBuilder();
+        for (int i:integers){
+            capcap.append(carps.get(i).getNum());
+        }
+        carNumber.setText(""+capcap.toString());
         buttonCancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -31,19 +34,19 @@ public class ShowDialog  {
         buttonOK.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int m;
-                try {
-                    m = Integer.parseInt(editText.getText().toString());
-                } catch (NumberFormatException e) {
-                    m = 0;
-                }
-                if (m == 0) {
-                    dialog.dismiss();
-                } else {
-                    carp.setPrice(carp.getPrice() + m);
-                    carpAdapter.notifyDataSetChanged();
-                    dialog.dismiss();
-                }
+//                int m;
+//                try {
+//                    m = Integer.parseInt(editText.getText().toString());
+//                } catch (NumberFormatException e) {
+//                    m = 0;
+//                }
+//                if (m == 0) {
+//                    dialog.dismiss();
+//                } else {
+//                    carp.setPrice(carp.getPrice() + m);
+//                    carpAdapter.notifyDataSetChanged();
+//                    dialog.dismiss();
+//                }
             }
         });
         dialog.show();
